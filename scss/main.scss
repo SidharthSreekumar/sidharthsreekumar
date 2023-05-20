@@ -1,4 +1,8 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Poppins|Open+Sans:400italic,700italic,400,700);
+
 @import './variables';
+@import './header';
 
 * {
   margin: 0;
@@ -6,6 +10,23 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: $primary;
+/*Bootstrap Overrides*/
+:root {
+  --bs-body-font-size: 1.6rem;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: $primary;
+  color: $text;
+  font-family: $poppins;
+}
+
+pre {
+  margin: 0;
+}
+
