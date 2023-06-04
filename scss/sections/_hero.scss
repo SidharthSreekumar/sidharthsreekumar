@@ -1,0 +1,47 @@
+.ptf-hero {
+  @include container;
+  margin-top: 15rem;
+
+  .block-1 {
+    .row-1 {
+      margin-bottom: 4rem;
+    }
+    .row-2 {
+      .socials {
+        &-icons .bi {
+          font-size: 1.6rem;
+          padding: 1rem 1.5rem;
+          margin-right: 1rem;
+          border-radius: 0.5rem;
+          @include teal-box-shadow;
+        }
+      }
+    }
+  }
+
+  .block-2 {
+    width: 50%;
+    .image-bg {
+      position: relative;
+      @include teal-box-shadow;
+      width: 32rem;
+      height: 30rem;
+      padding: 1rem;
+    }
+    &__profile {
+      position: absolute;
+      bottom: 0;
+      height: auto;
+      width: 30rem;
+      transform: rotateY(180deg);
+    }
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    span {
+      color: $accent;
+    }
+  }
+}

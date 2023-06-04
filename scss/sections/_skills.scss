@@ -1,0 +1,39 @@
+.ptf-skills {
+  @include container;
+  flex-direction: column;
+
+  .skills {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: #50535b 0px 0px 10px 0px;
+    .items {
+      background-color: $primary-dark;
+      border-radius: 0.5rem;
+      width: max-content;
+      min-width: 21rem;
+      .item {
+        padding: 2rem;
+
+        &.selected {
+          color: $secondary;
+          background-color: darken($primary-dark, 2%);
+        }
+      }
+
+      hr {
+        margin: 0 1rem;
+      }
+
+      &-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1rem;
+        background-color: darken($primary-dark, 2%);
+        padding: 1rem;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -6,11 +6,10 @@
 
   .contact {
     display: block;
-    // border: 0.1rem solid black;
     border-radius: 0.5rem;
     padding-inline: 1rem;
     margin-left: 2rem;
-    box-shadow: 0 0 1rem 0.1rem #a7ffed8a;
+    box-shadow: 0 0 1rem 0.1rem $secondary-dimmed;
 
     a {
       color: $secondary;

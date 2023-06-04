@@ -1,0 +1,43 @@
+.ptf-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  padding-inline: 2rem;
+  background-color: darken($primary, 2%);
+  color: darken(#ccc, 5%);
+  opacity: 0.8;
+  @include transition-ease-fast;
+  &:hover {
+    opacity: 1;
+    box-shadow: #50535b 0px 0px 10px 0px;
+
+    .logo {
+      filter: grayscale(0);
+    }
+  }
+  .logo {
+    margin: 2rem 1rem;
+    width: 8rem;
+    aspect-ratio: 1/1;
+    @include transition-ease-fast;
+    filter: grayscale(1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .label {
+    text-align: center;
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid black;
+  }
+
+  hr {
+    margin: 0 1rem;
+  }
+}

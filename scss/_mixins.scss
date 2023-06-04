@@ -1,0 +1,18 @@
+@mixin teal-box-shadow {
+  box-shadow: 0 0 1rem 0.1rem $secondary-dimmed;
+}
+
+@mixin container {
+  display: flex;
+  margin-inline: auto;
+  padding-bottom: 15rem;
+  margin-top: 4rem;
+  max-width: 108rem;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+@mixin transition-ease-fast {
+  transition: all 0.2s ease-in-out;
+}

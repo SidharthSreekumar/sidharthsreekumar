@@ -1,14 +1,14 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 @import url(http://fonts.googleapis.com/css?family=Poppins|Open+Sans:400italic,700italic,400,700);
 
+@import './mixins';
 @import './variables';
-@import './header';
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import './sections/header';
+@import './sections/hero';
+@import './sections/skills';
+@import './components/card';
+@import './config';
 
 /*Bootstrap Overrides*/
 :root {
@@ -30,3 +30,16 @@ pre {
   margin: 0;
 }
 
+.section-header {
+  color: $secondary;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+section.ptf-container {
+  border-bottom: 0.1rem solid rgba(204, 204, 204, 25%);
+}
+
+.hidden {
+  display: none !important;
+}
