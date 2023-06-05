@@ -1,0 +1,51 @@
+.timeline {
+  &-items {
+    list-style-type: none;
+    margin-block: 2rem;
+    padding-left: 2rem;
+    border-left: 3px solid grey;
+    margin-left: 11rem;
+
+    li.timeline-item {
+      margin-bottom: 2rem;
+      margin-top: -0.3rem;
+      position: relative;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-weight: bold;
+        position: relative; // To put the bullet in absolute;
+
+        // The bullet point on the timeline.
+        &::before {
+          content: '';
+          position: absolute;
+          left: -4.8rem;
+          top: -0.3rem;
+          border: 0.3rem solid grey;
+          background-color: $primary;
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 50%;
+          transform: translate(-0.5px, 0.2em);
+        }
+      }
+
+      .date-interval {
+        position: absolute;
+        left: -13rem;
+        top: 0.7rem;
+      }
+
+      &.ptf-card {
+        align-items: flex-start;
+        padding-block: 1rem;
+        border-radius: 0.5rem;
+        opacity: 1;
+      }
+    }
+  }
+}

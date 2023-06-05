@@ -15,6 +15,10 @@
       .item {
         padding: 2rem;
 
+        &:hover {
+          background-color: darken($primary-dark, 1%);
+        }
+
         &.selected {
           color: $secondary;
           background-color: darken($primary-dark, 2%);

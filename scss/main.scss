@@ -1,20 +1,27 @@
+/* External imports */
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 @import url(http://fonts.googleapis.com/css?family=Poppins|Open+Sans:400italic,700italic,400,700);
-
+/* Config items */
 @import './mixins';
 @import './variables';
+@import './config';
+/* Sections */
 @import './sections/header';
 @import './sections/hero';
 @import './sections/skills';
+@import './sections/education';
+@import './sections/experience';
+@import './sections/contact';
+@import './sections/footer';
+/* Components */
 @import './components/card';
-@import './config';
+@import './components/timeline';
+@import './components/socials';
+@import './components/form';
 
-/*Bootstrap Overrides*/
-:root {
-  --bs-body-font-size: 1.6rem;
-}
 
+/* Common Styles */
 html {
   font-size: 62.5%;
 }
@@ -30,16 +37,53 @@ pre {
   margin: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #292929 inset !important;
+    -webkit-text-fill-color: #ccc !important;
+}
+
 .section-header {
   color: $secondary;
   font-size: 4rem;
   font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.section-subheader {
+  color: #ffe600;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: -1rem;
 }
 
 section.ptf-container {
-  border-bottom: 0.1rem solid rgba(204, 204, 204, 25%);
+  border-bottom: 0.1rem solid $ptf-gray;
 }
 
 .hidden {
   display: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #ccc;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+/* Bootstrap Overrides */
+:root {
+  --bs-body-font-size: 1.6rem;
+  --bs-navbar-color: #151519;
 }

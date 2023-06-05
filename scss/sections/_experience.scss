@@ -1,0 +1,24 @@
+.ptf-experience {
+  @include container;
+  flex-direction: column;
+
+  .ptf-card {
+    hr {
+      margin: 1rem 0;
+      width: 100%;
+    }
+
+    .tech {
+      margin-top: 1rem;
+      .badge {
+        font-weight: normal;
+        font-size: 1.2rem;
+        color: $secondary !important;
+
+        &:hover {
+          color: $accent !important;
+        }
+      }
+    }
+  }
+}

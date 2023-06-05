@@ -1,0 +1,14 @@
+.socials {
+  &-icons .bi {
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid $ptf-gray;
+    @include transition-ease-fast;
+
+    &:hover {
+      @include teal-box-shadow;
+    }
+  }
+}

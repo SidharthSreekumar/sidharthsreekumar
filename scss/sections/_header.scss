@@ -3,13 +3,19 @@
   font-size: 1.4rem;
   padding-inline: 2rem;
   color: $text;
+  background-color: #151519 !important;
 
   .contact {
     display: block;
     border-radius: 0.5rem;
     padding-inline: 1rem;
-    margin-left: 2rem;
-    box-shadow: 0 0 1rem 0.1rem $secondary-dimmed;
+    margin-left: 1rem;
+    border: 1px solid $ptf-gray;
+    @include transition-ease-fast;
+
+    &:hover {
+      box-shadow: 0 0 1rem 0.1rem $secondary-dimmed;
+    }
 
     a {
       color: $secondary;

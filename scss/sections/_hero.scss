@@ -1,21 +1,11 @@
 .ptf-hero {
   @include container;
   margin-top: 15rem;
+  padding-bottom: 10rem;
 
   .block-1 {
     .row-1 {
       margin-bottom: 4rem;
-    }
-    .row-2 {
-      .socials {
-        &-icons .bi {
-          font-size: 1.6rem;
-          padding: 1rem 1.5rem;
-          margin-right: 1rem;
-          border-radius: 0.5rem;
-          @include teal-box-shadow;
-        }
-      }
     }
   }
 
