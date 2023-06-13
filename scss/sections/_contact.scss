@@ -1,7 +1,19 @@
 .ptf-contact {
-  @include container;
+  // @include container;
   &.ptf-container {
     border-bottom: none;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include media-md {
+    .d-flex {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   .block-1 {
@@ -29,7 +41,8 @@
 
   .block-1,
   .block-2 {
-    width: 49%;
+    width: 100%;
+    // margin-inline: 2rem;
     .ptf-card {
       box-shadow: #2d2e33 0px 3px 8px;
       opacity: 1;
@@ -38,6 +51,13 @@
       &:hover {
         box-shadow: #2d2e33 0px 3px 8px;
       }
+    }
+  }
+
+  @include media-md {
+    .block-1,
+    .block-2 {
+      width: 49%;
     }
   }
 

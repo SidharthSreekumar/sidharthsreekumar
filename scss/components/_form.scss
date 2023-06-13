@@ -1,6 +1,7 @@
 .ptf-form {
   width: 100%;
-  label, button {
+  label,
+  button {
     text-transform: uppercase;
     font-size: 1.2rem;
   }
@@ -19,7 +20,8 @@
     &:hover {
       background-color: darken($color: #2d2e33, $amount: 15%);
     }
-    &:focus, &:focus-visible {
+    &:focus,
+    &:focus-visible {
       background-color: darken($color: #2d2e33, $amount: 20%);
       color: #ccc;
       border: none;
@@ -35,11 +37,25 @@
     color: $accent;
     padding: 1rem 3rem;
     background-color: darken($color: #2d2e33, $amount: 10%);
-    border: 1px solid rgba(204,204,204,.2509803922);
+    border: 1px solid rgba(204, 204, 204, 0.2509803922);
 
     &:hover {
       background-color: darken($color: #2d2e33, $amount: 15%);
-      @include teal-box-shadow
+      @include teal-box-shadow;
     }
+  }
+}
+
+.error-text {
+  display: block;
+  visibility: hidden;
+  margin-top: -1rem;
+  font-size: 1.2rem;
+  opacity: 0;
+  color: $warn;
+  @include transition-ease-fast;
+  &.show {
+    visibility: visible;
+    opacity: 1;
   }
 }

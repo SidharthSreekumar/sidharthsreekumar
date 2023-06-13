@@ -9,9 +9,14 @@
     display: block;
     border-radius: 0.5rem;
     padding-inline: 1rem;
-    margin-left: 1rem;
+    margin-left: 0;
     border: 1px solid $ptf-gray;
+    max-width: max-content;
     @include transition-ease-fast;
+
+    @include media-lg {
+      margin-left: 1rem;
+    }
 
     &:hover {
       box-shadow: 0 0 1rem 0.1rem $secondary-dimmed;

@@ -6,6 +6,7 @@
 @import './mixins';
 @import './variables';
 @import './config';
+@import './responsiveness';
 /* Sections */
 @import './sections/header';
 @import './sections/hero';
@@ -19,7 +20,6 @@
 @import './components/timeline';
 @import './components/socials';
 @import './components/form';
-
 
 /* Common Styles */
 html {
@@ -45,9 +45,9 @@ img {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px #292929 inset !important;
-    -webkit-text-fill-color: #ccc !important;
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #292929 inset !important;
+  -webkit-text-fill-color: #ccc !important;
 }
 
 .section-header {
@@ -67,6 +67,17 @@ input:-webkit-autofill:active{
 
 section.ptf-container {
   border-bottom: 0.1rem solid $ptf-gray;
+  display: flex;
+  margin-inline: 2rem;
+  padding-bottom: 4rem;
+  margin-top: 4rem;
+  max-width: 108rem;
+}
+
+@include media-lg {
+  section.ptf-container {
+    margin-inline: auto;
+  }
 }
 
 .hidden {
@@ -86,4 +97,35 @@ a {
 :root {
   --bs-body-font-size: 1.6rem;
   --bs-navbar-color: #151519;
+}
+
+/* Scrollbar styling */
+:root::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #151519;
+  border-radius: 10px;
+}
+
+:root::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+:root::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: -webkit-gradient(
+    linear,
+    40% 0%,
+    75% 84%,
+    from($secondary),
+    to(lighten($secondary, 10%)),
+    color-stop(0.6, $secondary)
+  );
+}
+
+/* For Firefox */
+html {
+  scrollbar-color: $secondary #151519;
+  scrollbar-width: auto;
 }

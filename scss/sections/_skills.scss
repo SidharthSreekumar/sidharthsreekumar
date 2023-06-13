@@ -1,5 +1,4 @@
 .ptf-skills {
-  @include container;
   flex-direction: column;
 
   .skills {
@@ -11,7 +10,7 @@
       background-color: $primary-dark;
       border-radius: 0.5rem;
       width: max-content;
-      min-width: 21rem;
+      min-width: 16rem;
       .item {
         padding: 2rem;
 
@@ -30,13 +29,17 @@
       }
 
       &-details {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 1rem;
         background-color: darken($primary-dark, 2%);
         padding: 1rem;
         width: 100%;
+
+        &.show {
+          display: flex;
+        }
       }
     }
   }
