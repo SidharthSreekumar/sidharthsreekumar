@@ -1,6 +1,5 @@
 /* External imports */
-@import '../node_modules/bootstrap/scss/bootstrap';
-@import url(https://fonts.googleapis.com/css?family=Poppins|Open+Sans:400italic,700italic,400,700);
+// @import '../node_modules/bootstrap/scss/bootstrap';
 /* Config items */
 @import './mixins';
 @import './variables';
@@ -29,6 +28,7 @@ body {
   background-color: $primary;
   color: $text;
   font-family: $poppins;
+  font-display: swap;
 }
 
 pre {
