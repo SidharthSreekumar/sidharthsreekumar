@@ -41,4 +41,8 @@ window.onload = function () {
       }
     );
   });
+
+  // Updating year in footer
+  document.getElementById('copyright').innerHTML =
+    `Copyright&nbsp;&copy; ` + new Date().getFullYear();
 };

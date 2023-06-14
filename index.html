@@ -3,8 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Hello, I am Sidharth. A web developer experienced in HTML, JavaScript and CSS. This is my portfolio website."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css?family=Poppins|Open+Sans:400italic,700italic,400,700"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <title>Sidharth Sreekumar | Web Developer</title>
     <link
@@ -71,16 +94,21 @@
         </div>
         <div class="row-2 socials">
           <div class="socials-icons">
-            <a target="_blank" href="https://www.github.com/sidharthsreekumar"
+            <a
+              target="_blank"
+              aria-label="Github logo"
+              href="https://www.github.com/sidharthsreekumar"
               ><i class="bi bi-github"></i
             ></a>
             <a
               target="_blank"
+              aria-label="LinkedIn logo"
               href="https://www.linkedin.com/in/sidharth-sreekumar/"
               ><i class="bi bi-linkedin"></i
             ></a>
             <a
               target="_blank"
+              aria-label="Resume logo"
               href="./public/files/Resume_SidharthSreekumar_WebDeveloper.pdf"
               ><i class="bi bi-file-earmark-person"></i
             ></a>
@@ -91,7 +119,7 @@
         <div class="image-bg">
           <img
             class="block-2__profile"
-            src="./public/img/sidharth-bw-bayfront-cropped.png"
+            src="./public/img/sidharth-bw-bayfront-cropped.webp"
             alt="profile image"
           />
         </div>
@@ -136,7 +164,7 @@
             <div
               class="logo"
               style="
-                background-image: url(./public/img/logos/JavaScript-logo.png);
+                background-image: url(./public/img/logos/JavaScript-logo.webp);
               "
             ></div>
             <div class="label">JavaScript</div>
@@ -430,7 +458,6 @@
             ></div>
             <h2>Sidharth Sreekumar</h2>
             <h3>Web Developer</h3>
-            <span>Phone: <a href="tel:+14375182255">+1 437 518 2255</a></span>
             <span>
               Email:
               <a href="mailto:sidarth.sreekumar@gmail.com"
@@ -441,16 +468,19 @@
               <div class="socials-icons">
                 <a
                   target="_blank"
+                  aria-label="Github logo"
                   href="https://www.github.com/sidharthsreekumar"
                   ><i class="bi bi-github"></i
                 ></a>
                 <a
                   target="_blank"
+                  aria-label="LinkedIn logo"
                   href="https://www.linkedin.com/in/sidharth-sreekumar/"
                   ><i class="bi bi-linkedin"></i
                 ></a>
                 <a
                   target="_blank"
+                  aria-label="Resume logo"
                   href="./public/files/Resume_SidharthSreekumar_WebDeveloper.pdf"
                   ><i class="bi bi-file-earmark-person"></i
                 ></a>
@@ -500,24 +530,21 @@
     </section>
     <footer class="d-flex flex-column align-items-center">
       <h2>Sidharth Sreekumar</h2>
-      <span
-        >Copyright&nbsp;&copy;
-        <script>
-          document.write(new Date().getFullYear());
-        </script></span
-      >
+      <span id="copyright"></span>
     </footer>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
     integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
     crossorigin="anonymous"
+    defer
   ></script>
   <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    aync
   ></script>
-  <script type="text/javascript">
+  <script type="text/javascript" defer>
     (function () {
       emailjs.init('8Yw7IHLP4DQW0jn9H');
     })();
