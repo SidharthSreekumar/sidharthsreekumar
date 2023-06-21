@@ -490,7 +490,7 @@
         </div>
         <div class="block-2">
           <div class="ptf-card h-100">
-            <form action="/" class="ptf-form" id="contact-form">
+            <form method="post" class="ptf-form" name="contact" id="contact-form" data-netlify="true">
               <label for="fullName" class="form-label">Full Name</label>
               <input
                 type="text"
@@ -539,15 +539,5 @@
     crossorigin="anonymous"
     defer
   ></script>
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    aync
-  ></script>
-  <script type="text/javascript" defer>
-    (function () {
-      emailjs.init('8Yw7IHLP4DQW0jn9H');
-    })();
-  </script>
   <script src="js/main.js"></script>
 </html>
