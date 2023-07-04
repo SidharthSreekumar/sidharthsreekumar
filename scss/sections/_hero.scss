@@ -33,7 +33,14 @@
     font-size: 4rem;
     font-weight: 700;
     span {
-      color: $accent;
+      color: transparent;
+      background: linear-gradient(
+        86deg,
+        rgba(100, 255, 218, 1) 0%,
+        rgba(255, 230, 0, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
     }
   }
 }
